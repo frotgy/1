@@ -1,0 +1,20 @@
+await initHydra()
+
+s0.initImage('https://freight.cargo.site/w/1500/q/75/i/C3236425708976273978868151789916/4.jpg')
+src(s0).modulate(osc(2, 0.2), 3).out()
+
+$: s("[bd <hh oh>]*2").bank("ViscoSpaceDrum").dec(.4)
+ 
+$: s("gigi").slow(4).room(1).gain(6)
+
+$: note("c3 g3 e4".fast(1))
+  .sound("sawtooth").vowel("<a e i o>")
+  .lpf(1200)
+  .sound("wt_digital_basique")
+  .lpf(1200)
+  .color('#00ff66')
+  .scope({
+    thickness: 18,
+    scale: 1.8,
+    pos: 0.75
+  })
